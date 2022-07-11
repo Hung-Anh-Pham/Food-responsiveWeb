@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-text-grey: #111;
+    --color-bg-white: #fff;
+    --color-bg-red: #ff0157;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--color-text-grey);
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 150vh;
+}
+
+section {
+    padding: 100px;
+}
+
+p {
+    font-weight: 300;
+    color: var(--color-text-grey);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.home .content h2 {
+    font-size: 5em;
+    font-weight: 700;
+    color: var(--color-bg-white);
+    margin-bottom: 20px;
+}
+
+.home .content p {
+    font-size: 1em;
+    color: var(--color-bg-white);
+}
+
+.btn {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-bg-white);
+    background-color: var(--color-bg-red);
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    letter-spacing: 6px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky {
+    background-color: var(--color-bg-white);
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header.sticky .logo,
+header.sticky .navigation li a {
+    color: var(--color-text-grey);
+}
+
+header .logo {
+    color: var(--color-bg-white);
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: var(--color-bg-red);
+    font-weight: 900;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+header .navigation li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+header .navigation li:not(last-child) {
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: var(--color-bg-white);
+    font-weight: 300;
+    transition: 0.5s;
+}
+
+header .navigation li a:hover,
+header .navigation li a:active {
+    color: var(--color-bg-red);
+    letter-spacing: 2px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+
+.titleText {
+    font-size: 2em;
+}
+
+.titleText span {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-bg-red);
+}
+
+.row .col50 .imgBx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.row .col50 .imgBx img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .content .box {
+    width: 340px;
+    margin: 20px;
+    background-color: var(--color-bg-white);
+    border: 15px solid var(--color-bg-white);
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+
+.menu .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu .content .box .textBx {
+    padding: 15px 0 5px;
+}
+
+.menu .content .box .textBx h3 {
+    font-weight: 400;
+}
+
+.expert .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.expert .content .box {
+    width: 250px;
+    margin: 15px;
+    border: 15px solid var(--color-bg-white);
+    background-color: var(--color-bg-white);
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+
+.expert .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.expert .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.expert .content .box .textBx {
+    padding: 15px 0 5px;
+}
+
+.expert .content .box .textBx h3 {
+    font-weight: 400;
+}
+
+.testimonials {
+    background-image: url(bg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.testimonials .title h2,
+.testimonials .title p {
+    color: var(--color-bg-white);
+}
+
+.testimonials .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.testimonials .content .box {
+    width: 340px;
+    margin: 20px;
+    padding: 40px;
+    background-color: var(--color-bg-white);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials .content .box .imgBx {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonials .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials .content .box .textBx {
+    text-align: center;
+}
+
+.testimonials .content .box .textBx p {
+    color: #666;
+    font-style: italic;
+}
+
+.testimonials .content .box .textBx h3 {
+    font-weight: 600;
+    margin-top: 20px;
+    color: var(--color-bg-red);
+}
+
+.contact {
+    background-image: url(bg3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.contactForm {
+    max-width: 500px;
+    padding: 75px 50px;
+    background-color: var(--color-bg-white);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.contactForm h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.contactForm .inputBx {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactForm .inputBx input,
+.contactForm .inputBx textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    outline: none;
+    font-size: inherit;
+    font-weight: 300;
+    resize: none;
+}
+
+.contactForm .inputBx input[type="submit"] {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--color-bg-white);
+    background-color: var(--color-bg-red);
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: unset;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border: none;
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+.contactForm .inputBx input[type="submit"]:hover {
+    letter-spacing: 6px;
+}
+
+.copyrightText {
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.copyrightText p {
+    color: #333;
+}
+
+.copyrightText a {
+    color: var(--color-bg-red);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    header .menuToggle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px) /*typical breakpoints for extra, small, and medium devices such as landscape tables, portait tablets and large phones, or phones */
+{
+    header,
+    header.sticky {
+        padding: 10px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-bg-white);
+    }
+
+    header .navigation.active li {
+        margin-left: 0;
+    }
+
+    header .navigation.active li a {
+        color: var(--color-text-grey);
+        font-size: 1.6em;
+        line-height: 2em;
+    }
+
+    header .navigation.active li a:hover,
+    header .navigation.active li a:active {
+        color: var(--color-bg-red);
+    }
+
+    header .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(bars-solid.svg);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        filter: invert(1);
+        transition: 0.15s;
+    }
+
+    header .menuToggle.active {
+        background: url(xmark-solid.svg);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    header.sticky .menuToggle {
+        filter: none;
+    }
+
+    section {
+        padding: 80px 20px 20px 20px;
+    }
+
+    .home .content h2 {
+        font-size: 4em;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row .col50 {
+        width: 100%;
+    }
+
+    .row .col50 .imgBx {
+        min-height: 440px;
+        margin-top: 20px;
+    }
+
+    .menu .content {
+        margin-top: 20px;
+    }
+
+    .menu .content .box {
+        margin: 10px;
+    }
+
+    .titleText {
+        font-size: 1.8em;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .expert .content {
+        margin-top: 20px;
+    }
+
+    .expert .content .box {
+        margin: 10px;
+    }
+
+    .testimonials .content {
+        margin-top: 20px;
+    }
+
+    .testimonials .content .box {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .contactForm {
+        padding: 35px 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .row .col50 .imgBx {
+        min-height: 360px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .home .content h2 {
+        font-size: 3em;
+    }
+
+    .row .col50 .imgBx {
+        min-height: 200px;
+        margin-top: 20px;
+    }
+}
